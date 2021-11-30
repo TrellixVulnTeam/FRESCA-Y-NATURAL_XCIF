@@ -1,0 +1,111 @@
+/*importamos a otros archivos--------------------------*/
+/*anidamos selectores------------------*/
+/*-----------------------RESPONSIVE--------
+  
+  /*# sourceMappingURL=style.css.map */
+  /* --------------------------------Posicion de areas-------------------------------------*/
+
+  
+
+/*-------------------------------FRUTOS SECOS-----------------------------*/
+body {
+  font-family: 'Lobster', cursive; }
+
+.container {
+  background-color: lightgray;
+  width: 100%;
+  max-width: 100%;
+  margin: 1.6em auto;
+  display: grid;
+  gap: 1.6em;
+  grid-template-columns: repeat(5, 1fr); 
+
+ /* --------------------------------Posicion de areas-------------------------------------*/
+ grid-template-areas: 
+  " header"
+  " menuf"
+  " contenidof"
+  "sidebar"
+  "footer";
+
+
+}
+/*--------------------------------Responsive---------------------------------------------*/
+
+
+  @media  (min-width: 500px) {
+      .container { grid-template-areas:
+        "header header header "
+        "menuf contenidof sidebar"
+        "footer footer footer"
+
+  }
+    
+  }
+
+
+
+.container > .header,
+.container > .menuf,
+.container > .contenidof,
+.container > .sidebar,
+.container > .footer {
+  background-color: #CAD3C8;
+  padding: 20px;
+  border: 2px solid  #DEBA9D; }
+
+.container .header,
+.container .footer {
+  display: grid;
+  display: flex;
+  grid-column: 1/6;
+  width: 100%;
+  text-align: center;
+  margin: auto; }
+
+.container > .menuf {
+  display: grid;
+  grid-gap: 20px;
+  font-family: 'Lobster', cursive;
+  align-content: space-around;
+  grid-column: 1 / 6;
+  align-content: space-between; }
+
+.container > .navegador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; }
+
+.container > .contenidof {
+  grid-column: span 4;
+ }
+
+.contenidof > .article {
+  background-color: #9E7777;
+  padding: 20px;
+  margin-top: 5px;
+  color: beige; }
+  
+.container > .sidebar {
+  grid-column: 5/6;
+  background-color: beige;
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.sidebar > .videos {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  grid-column-end: span 2; }
+
+.container .footer {
+  background-color: #9E7777;
+  height: 100px;
+  padding: 50px;
+  margin: 1.6em; }
+
